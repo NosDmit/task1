@@ -2,6 +2,9 @@
 
 ### Нужно выполнить
 
+Описание:
+https://gist.github.com/unit-cto/35df387e612502051371ebdd184db2ab
+
 Команда для запуска:
 
 `docker-compose up -d`

@@ -1,0 +1,13 @@
+version: "3"
+services:
+    app:
+        container_name: 'juni'
+        image: composer:latest
+        ports:
+            - "8000:8000"
+        volumes:
+            - .:/app
+        working_dir: /app
+        command: 'php -S 0.0.0.0:8000 public/index.php'
+        stdin_open: true
+        tty: true

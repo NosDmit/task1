@@ -1,5 +1,8 @@
 ## Juni 
 
+### Описание:
+https://gist.github.com/unit-cto/35df387e612502051371ebdd184db2ab
+
 ### Нужно выполнить
 
 Команда для запуска:
@@ -12,7 +15,7 @@
 
 Выполнить тесты:
 
-`docker exec juni bin/phpunit`
+`docker exec juni vendor/bin/phpunit`
 
 Пример выполнения:
 

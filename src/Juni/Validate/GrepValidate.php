@@ -7,7 +7,7 @@ final class GrepValidate implements ValidateInterface
     private $render;
     private $template;
 
-    public function validate(string $value): array
+    public function format(string $value): array
     {
         // тут можно написать на preg
         return [];

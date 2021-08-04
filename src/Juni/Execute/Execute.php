@@ -13,8 +13,8 @@ final class Execute implements ExecuteInterface
 
     public function run(string $template, string $render, array $symbols, ValidateInterface $validate): array
     {
-        $template = $validate->validate($template);
-        $render = $validate->validate($render);
+        $template = $validate->format($template);
+        $render = $validate->format($render);
 
         $symbolOpen = $symbols['open'];
         $symbolClose = $symbols['close'];
@@ -27,8 +27,7 @@ final class Execute implements ExecuteInterface
         // смотрим разницу между шаблоном и рендером
         // там где она есть в шаблоне ($template) должна быть переменная
         foreach (array_diff($template, $render) as $key => $item) {
-            //
-            $symbolOpenCount  = substr_count($item, $symbolOpen);
+            $symbolOpenCount = substr_count($item, $symbolOpen);
             $symbolCloseCount = substr_count($item, $symbolClose);
 
             // если нет символов, значит не переменная
@@ -55,6 +54,7 @@ final class Execute implements ExecuteInterface
 
             $variables[$item] = $value;
         }
+
         return $variables;
     }
 }

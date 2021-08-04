@@ -14,7 +14,7 @@ class ReplaceValidateTest extends TestCase
     public function testJuni(array $expected, string $values): void
     {
         $validate = new ReplaceValidate();
-        $this->assertSame($expected, $validate->validate($values));
+        $this->assertSame($expected, $validate->format($values));
     }
 
     /**

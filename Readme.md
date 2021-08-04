@@ -12,7 +12,7 @@
 
 Выполнить тесты:
 
-`docker exec juni bin/phpunit`
+`docker exec juni vendor/bin/phpunit`
 
 Пример выполнения:
 
